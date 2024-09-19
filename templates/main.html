@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Under Development</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar div {
+            height: 20px;
+            width: 0;
+            background-color: #007bff;
+            border-radius: 25px;
+            animation: progress 5s ease-in-out forwards;
+        }
+
+        .cta-button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        @keyframes progress {
+            0% { width: 0%; }
+            100% { width: 80%; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey, {{user}}!</h1>
+        <p>This page is currently under development...</p>
+        
+        <!-- Progress bar animation -->
+        <div class="progress-bar">
+            <div></div>
+        </div>
+
+        <!-- Call to Action Button -->
+        <button class="cta-button" onclick="alert('Thanks for your patience!')">Notify me when it's ready</button>
+    </div>
+
+    <script>
+        // This script could be used to add interactivity, like fetching user data or other dynamic content
+        const user = '{{user}}'; // Example of dynamic data injection
+        console.log(`User ${user} is visiting the page`);
+    </script>
+</body>
+</html>
